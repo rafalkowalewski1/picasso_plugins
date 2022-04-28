@@ -3,7 +3,7 @@
 This repository is for storing all plugins for the Picasso software, see:
 https://github.com/jungmannlab/picasso
 
-# To create a new plugin, please see the file plugin_framework.py
+#### To create a new plugin, please see the file plugin_framework.py
 
 Currently, the following plugins are available:
 * BKM_plugin.py - adds a dialog for performing BKM PAINT, see:
