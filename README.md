@@ -1,6 +1,8 @@
 # picasso_plugins
 
-This repository is for storing all plugins for the Picasso software, see:
+This repository stores example plugins for Picasso software, see:
 https://github.com/jungmannlab/picasso
 
-#### To create a new plugin, please see the file plugin_template.py
+The structure of Plugins changed slightly in Picasso 0.8.8.
+
+#### To create a new plugin, please see the file plugin_template.py in the main repo
