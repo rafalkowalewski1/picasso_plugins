@@ -1,6 +1,5 @@
-"""
-Template for creating a Picasso plugin. Any plugin should be moved to
-picasso/picasso/gui/plugins/
+"""Template for creating a Picasso plugin. Any plugin should be moved to
+picasso/gui/plugins/.
 Author:
 Date:
 """
@@ -8,18 +7,20 @@ Date:
 # Space to import packages
 import numpy as np
 
-# Do not change the part below unless stated otherwise
+
+# class that defines modifications to the GUI and actions
 class Plugin():
-    def __init___(self, window):
-        self.name = "render" # change if the plugin works for another application
+    def __init__(self, window):
+        self.name = "render"  # input the name of the app
         self.window = window
 
     def execute(self):
-        """
-        This function is called when opening a GUI.
+        """This function is called when opening a GUI."""
+        your_action = self.window.plugin_menu.addAction(
+            "What does your plugin do?"
+        )
+        your_action.triggered.connect(self.run_your_plugin)
 
-        It should add buttons to the menu bar, connect such actions
-        to fucntions, etc.
-        """
-
-        pass
+    def run_your_plugin(self):
+        """This function is called when clicking the menu entry."""
+        print(f"Hello world, pi is: {np.pi}")
