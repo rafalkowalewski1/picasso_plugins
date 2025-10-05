@@ -21,10 +21,7 @@ class Plugin():
         self.window = window
 
     def execute(self):
-        tools_menu = self.window.menus[2]
-        tools_menu.addSeparator()
-
-        nanotron_filter_action = tools_menu.addAction(
+        nanotron_filter_action = self.window.plugin_menu.addAction(
             "Filter picks with an MLP"
         )
         nanotron_filter_action.triggered.connect(self.nanotron_filter)

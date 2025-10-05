@@ -11,19 +11,15 @@ class Plugin():
         self.window = window
 
     def execute(self):
-        tools_menu = self.window.menus[2]
-        tools_menu.addSeparator()
-        self.window.fret_traces_action = tools_menu.addAction(
+        fret_traces_action = self.window.plugin_menu.addAction(
             "Show FRET traces"
         )
-        self.window.fret_traces_action.triggered.connect(self.show_fret)
+        fret_traces_action.triggered.connect(self.show_fret)
 
-        self.window.calculate_fret_action = tools_menu.addAction(
+        calculate_fret_action = self.window.plugin_menu.addAction(
             "Calculate FRET in picks"
         )
-        self.window.calculate_fret_action.triggered.connect(
-            self.calculate_fret_dialog
-        )
+        calculate_fret_action.triggered.connect(self.calculate_fret_dialog)
 
     def show_fret(self):
         channel_acceptor = self.window.view.get_channel(
